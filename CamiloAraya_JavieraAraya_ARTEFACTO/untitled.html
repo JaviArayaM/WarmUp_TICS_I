@@ -1,0 +1,57 @@
+<script type="text/javascript"> 
+		var si, ma, e, vp,vf,an,r;
+		function calc(f){
+			si=parseInt(f.prin.value);
+			ma= parseInt(f.rate.value);
+			e=parseInt(f.time.value);
+			var mort=85;
+			var jub=65;
+			var edad=jub-e;
+			var sanual=0.1*((100-0.95)/100)*si*12;
+			var inf=2;
+			var rent=5.14;
+			var ti=(rent-inf)/100;
+			var porc=1+ti;
+			var i=0.03;
+			 vf= sanual*(Math.pow(porc,edad));
+			 r=1/porc;
+			 vp=vf*(((Math.pow(r,edad+1))-r)/(r-1));
+			 ax=(i*(Math.pow((1+i),mort-jub)))/((Math.pow((1+i),mort-jub))-1);
+			 an=(vp+ma)*ax;
+			 anualidad=an/12;
+			 
+
+			f.simp.value=anualidad;
+
+			if (si<270196){
+				f.simp.value ="Sueldo insuficiente";
+			}
+			else if (si>2185825){
+				si=2185825;
+				var sanual=0.1*((100-0.95)/100)*si*12;
+				vf= sanual*(Math.pow(porc,edad));
+			 r=1/porc;
+			 vp=vf*(((Math.pow(r,edad+1))-r)/(r-1));
+			 ax=(i*(Math.pow((1+i),mort-jub)))/((Math.pow((1+i),mort-jub))-1);
+			 an=vp*ax; 
+			 anual=(an+ma)/12;
+
+			f.simp.value=anual;
+
+
+
+
+			}
+			if (e<18 ){
+				f.simp.value='edad insuficiente';
+
+			}
+			else if(e>85){
+				f.simp.value='excede edad';
+			}
+			
+			
+
+
+		}
+	</script>

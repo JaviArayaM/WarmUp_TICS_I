@@ -1,0 +1,134 @@
+ #afp{
+	width: 40%;
+	height: 20em;
+	
+	position: relative;
+	top: 7em;
+	text-align: center;
+	color: white;
+	font-family: 'iceberg', cursive;
+	text-align: center;
+	background: rgba(2,2,2,0.2);
+
+}
+#afp h2{
+	position: relative;
+	top:4em;
+}
+#afp h1{
+	position: relative;
+	top: 2em;
+}
+section #woman{
+	overflow: hidden;
+	width: 18em;
+	height: 280px;
+	position: absolute;
+	
+	
+	
+	left: 50em;
+	top: -6em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(woman.jpg) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 60px hotpink;
+	transition: linear 0.5s;
+	
+}
+#woman a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#woman:hover {
+	width: 18em;
+	height: 280px;
+    box-shadow: 0 0 60px pink;
+    opacity: 1;
+    
+
+    
+
+
+}
+#m{
+	width: 18em;
+	height: 35px;
+	padding: auto;
+	position: absolute;
+	top:10em;
+	left:-2.4em;
+	border:1px ;
+	font-family: 'iceberg', cursive;
+	font-weight: 400;
+ 	font-size: 2em;
+ 	text-decoration: none;
+	background: violet;
+	color:black;
+	opacity: 0.5;
+}
+
+section #man{
+	overflow: hidden;
+	width: 18em;
+	height: 280px;
+	position: absolute;
+	
+	
+	
+	left: 50em;
+	top: 13em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(man.png) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 20px aqua;
+	transition: linear 0.5s;
+	
+}
+#man a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#man:hover {
+	width: 18em;
+	height: 280px;
+    box-shadow: 0 0 60px aqua;
+    opacity: 1;
+    
+
+    
+
+
+}
+#mo{
+	width: 18em;
+	height: 35px;
+	padding: auto;
+	position: absolute;
+	top:10em;
+	left:-2.5em;
+	border:1px ;
+	font-family: 'iceberg', cursive;
+	font-weight: 400;
+ 	font-size: 2em;
+ 	text-decoration: none;
+	background: aqua;
+	color:black;
+	opacity: 0.5;
+}
+
+
+footer{
+	position: relative;
+	top: 20em;
+}

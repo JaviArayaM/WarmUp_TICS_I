@@ -1,0 +1,15 @@
+input{
+	margin-bottom: : 1em;
+	border-radius: 30px;
+	padding: 0.6em; 
+	display: flex;
+	position: relative;
+	top: 0em;
+	
+
+
+}
+#cent{
+	position: relative;
+	top:-1.5em;
+}

@@ -1,0 +1,286 @@
+ #men{
+	width: 90%;
+	height: 40em;
+	
+	position: relative;
+	top: 3em;
+	text-align: center;
+	color: white;
+	font-family: 'iceberg', cursive;
+	text-align: center;
+	background: rgba(2,2,2,0.2);
+
+}
+section #habitat{
+	overflow: hidden;
+	width: 14em;
+	height: 200px;
+	position: absolute;
+	
+	
+	
+	left: 1em;
+	top: 8em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(habitat.png) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 60px gold;
+	transition: linear 0.5s;
+	
+}
+#habitat a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#habitat:hover {
+	width: 14em;
+	height: 200px;
+    box-shadow: 0 0 60px white;
+    opacity: 1;
+    
+
+    
+
+
+}
+section #modelo{
+	overflow: hidden;
+	width: 14em;
+	height: 200px;
+	position: absolute;
+	
+	
+	
+	left: 20em;
+	top: 8em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(modelo.png) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 60px gold;
+	transition: linear 0.5s;
+	
+}
+#modelo a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#modelo:hover {
+	width: 14em;
+	height: 200px;
+    box-shadow: 0 0 60px white;
+    opacity: 1;
+    
+
+    
+
+
+}
+section #planvital{
+	overflow: hidden;
+	width: 14em;
+	height: 200px;
+	position: absolute;
+	
+	
+	
+	left: 38em;
+	top: 8em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(planvital.jpg) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 60px gold;
+	transition: linear 0.5s;
+	
+}
+#planvital a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#planvital:hover {
+	width: 14em;
+	height: 200px;
+    box-shadow: 0 0 60px white;
+    opacity: 1;
+    
+
+    
+
+
+}
+section #cuprum{
+	overflow: hidden;
+	width: 14em;
+	height: 200px;
+	position: absolute;
+	
+	
+	
+	left: 57em;
+	top: 8em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(cuprum.jpg) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 60px gold;
+	transition: linear 0.5s;
+	
+}
+#cuprum a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#cuprum:hover {
+	width: 14em;
+	height: 200px;
+    box-shadow: 0 0 60px white;
+    opacity: 1;
+    
+
+    
+
+
+}
+section #capital{
+	overflow: hidden;
+	width: 14em;
+	height: 200px;
+	position: absolute;
+	
+	
+	
+	left: 20em;
+	top: 25em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(capital.jpg) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 60px gold;
+	transition: linear 0.5s;
+	
+}
+#capital a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#capital:hover {
+	width: 14em;
+	height: 200px;
+    box-shadow: 0 0 60px white;
+    opacity: 1;
+    
+
+    
+
+
+}
+section #provida{
+	overflow: hidden;
+	width: 14em;
+	height: 200px;
+	position: absolute;
+	
+	
+	
+	left: 40em;
+	top: 25em;
+	padding: auto;
+	border-radius: 50px;
+	background: url(provida.png) no-repeat center;
+	background-size: cover;
+	box-shadow: 0 0 60px gold;
+	transition: linear 0.5s;
+	
+}
+#provida a{ 
+width: 18em;
+height: 280px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#provida:hover {
+	width: 14em;
+	height: 200px;
+    box-shadow: 0 0 60px white;
+    opacity: 1;
+    
+
+    
+
+
+}
+section #dud{
+	overflow: hidden;
+	width: 20em;
+	height: 100px;
+	position: absolute;
+	
+	
+	
+	left: 60em;
+	top: 33em;
+	padding: auto;
+	border-radius: 50px;
+	background-image: linear-gradient(-90deg, aqua,white,aqua);
+	box-shadow: 0 0 20px blue;
+	transition: linear 0.5s;
+	
+}
+#dud a{ 
+width: 60em;
+height: 200px;
+border:2px ;
+display: block;
+text-decoration: none;
+
+ }
+#dud:hover {
+	width: 20em;
+	height: 100px;
+    box-shadow: 0 0 60px blue;
+    opacity: 0.9;
+    
+
+    
+
+
+}
+#mn{
+	width: 10em;
+	height: 100px;
+	padding: 1px 2px;
+	position: relative;
+	top:40px;
+	left: 70px;
+	border:1px ;
+	font-family: 'iceberg', cursive;
+	font-weight: 400;
+ 	font-size: 1em;
+ 	text-decoration: none;
+	
+	color:black;
+}

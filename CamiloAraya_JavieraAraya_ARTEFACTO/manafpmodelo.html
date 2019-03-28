@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>Retirement Simulator</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Bangers|Fruktur|Iceberg" rel="stylesheet">
+
+
+
+
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="femafp.css">
+	<link rel="stylesheet" href="normalize.css">
+	<script type="modernizr-custom.js"></script>
+
+
+	<script type="text/javascript"> 
+		var si, ma, e, vp,vf,an,r;
+		function calc(f){
+			si=parseInt(f.prin.value);
+			ma= parseInt(f.rate.value);
+			e=parseInt(f.time.value);
+			var mort=85;
+			var jub=65;
+			var edad=jub-e;
+			var sanual=0.1*((100-1.20)/100)*si*12;
+			var inf=1.6;
+			var rent=4.5;
+			var ti=(rent-inf)/100;
+			var porc=1+ti;
+			var i=0.03;
+			 vf= sanual*(Math.pow(porc,edad));
+			 r=1/porc;
+			 vp=vf*(((Math.pow(r,edad+1))-r)/(r-1));
+			 ax=(i*(Math.pow((1+i),mort-jub)))/((Math.pow((1+i),mort-jub))-1);
+			 an=(vp+ma)*ax;
+			 anualidad=an/12;
+			 
+
+			f.simp.value=anualidad;
+
+			if (si<270196){
+				f.simp.value ="Sueldo insuficiente";
+			}
+			else if (si>2185825){
+				si=2185825;
+				var sanual=0.1*((100-0.95)/100)*si*12;
+				vf= sanual*(Math.pow(porc,edad));
+			 r=1/porc;
+			 vp=vf*(((Math.pow(r,edad+1))-r)/(r-1));
+			 ax=(i*(Math.pow((1+i),mort-jub)))/((Math.pow((1+i),mort-jub))-1);
+			 an=vp*ax; 
+			 anual=(an+ma)/12;
+
+			f.simp.value=anual;
+
+
+
+
+			}
+			if (e<18 ){
+				f.simp.value='edad insuficiente';
+
+			}
+			else if(e>85){
+				f.simp.value='excede edad';
+			}
+			
+			
+
+
+		}
+	</script>
+
+</head>
+<body>
+	<header>
+		<div id='small'>&#xf24e;</div>
+		<h1>Retirement Simulator</h1>
+		<nav>
+			 
+			    	 <a href="index.html"> inicio </a>
+			 
+		</nav>
+		
+			
+
+		
+
+	</header>
+	<section>
+		<center><h1 id="cent">¡Proyecte su pensión aquí!</h1></center>
+		
+		<form>
+			<center>
+			Saldo Bruto: <input type="text" name="prin"><br>
+			Saldo Disponible: <input type="text" name="rate"><br>
+			Edad: <input type="text" name="time"><br>
+			<input type="button" name="btn" value="Calculate " onclick="calc(this.form)">
+			Pensión: <input type="text" name="simp"><br>
+			
+		</center>
+		</form>
+
+
+
+
+		
+	</section>
+<footer>
+	<div id="fotkk">
+		<div id='small'>&#xf24e;</div>
+		<h1 id="foot">Retirement Simulator</h1>
+	</div>
+</footer>
+</body>
+</html>
