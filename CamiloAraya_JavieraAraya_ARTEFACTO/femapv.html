@@ -25,9 +25,9 @@
 			ma= parseInt(f.rate.value);
 			e=parseInt(f.time.value);
 			desea=parseInt(f.val.value);
-			var inf=2;
-			var rent=5.14;
-			var ti=(rent-inf)/100;
+			
+			var rent=4.34;
+			var ti=(rent)/100;
 			var porc=1+ti;
 			r=1/porc;
 			var i=0.03;
@@ -40,95 +40,98 @@
 
 
 			
-			an=desea*12;
-			
-			ax=(i*(Math.pow((1+i),mort-jub)))/((Math.pow((1+i),mort-jub))-1);
-			vp=(an/ax)-ma;
-
-			vf=vp/((((Math.pow(r,edad+1))-r)/(r-1)))
-
-			sanual=vf/((Math.pow(porc,edad)));
-            
-            
-			apvahorro=sanual/(0.1*((100-0.95)/100)*12);
+			var sanualafp=0.1*((100)/100)*si*12;
+			vfafp= (sanualafp*(Math.pow(porc,edad-1)));
 			 
-			total=apvahorro-si;
+			 vpafp=(vfafp*(((Math.pow(r,edad+1))-r)/(r-1)));
+			 axafp=(i*(Math.pow((1+i),mort-jub)))/((Math.pow((1+i),mort-jub))-1);
+			 anafp=(vpafp+ma)*axafp; 
+			 anualafp=anafp/12;
+			
+
+
+			
+			an=desea;
+			
+	
+			 
+			total=(an-anualafp)*12;
 			 
 			 
 			var liq=si*0.8198;
 			if(total<161500 ){
-				var tasaint=0.04*liq;
+				var tasaint=0.15*liq;
 				var dcto= 0.03*liq;
 				var tot=tasaint-dcto;
 				var apv= liq-tot;
 				var range=0.15*total;
 				var apvtim=apv-range;
 
-				f.simp.value=apvtim/12;
+				f.simp.value=apvtim/20;
 				f.mensa.value='APV OPCION A';
 
 
 			}
 			else if(total>161500 && liq<2471650){
-				var tasaint=0.04*liq;
+				var tasaint=0.15*liq;
 				var dcto= 0.03*liq;
 				var tot=tasaint-dcto;
 				var apv= liq-tot;
 				var range=0.15*total;
 				var apvtim=apv-range;
 
-				f.simp.value=apvtim/12;
+				f.simp.value=apvtim/20;
 				f.mensa.value='APV OPCION A';
 
 
 			}
 			else if(total>161500 && liq>=2471650 && liq<3384710){
-				var tasaint=0.04*liq;
+				var tasaint=0.135*liq;
 				var dcto= 0.03*liq;
 				var tot=tasaint-dcto;
 				var apv= liq-tot;
 				var range=0.135*total;
 				var apvtim=apv-range;
 
-				f.simp.value=apvtim/12;
+				f.simp.value=apvtim/20;
 				f.mensa.value='APV OPCION B';
 
 
 			}
 			else if(total>161500 && liq>=3384710 && liq<4351770){
-				var tasaint=0.04*liq;
+				var tasaint=0.23*liq;
 				var dcto= 0.03*liq;
 				var tot=tasaint-dcto;
 				var apv= liq-tot;
 				var range=0.23*total;
 				var apvtim=apv-range;
 
-				f.simp.value=apvtim/12;
+				f.simp.value=apvtim/20;
 				f.mensa.value='APV OPCION B';
 
 			}
 			else if(total>161500 && liq>=4351770 && liq<5802360){
-				var tasaint=0.04*liq;
+				var tasaint=0.3*liq;
 				var dcto= 0.03*liq;
 				var tot=tasaint-dcto;
 				var apv= liq-tot;
 				var range=0.3*total;
 				var apvtim=apv-range;
 
-				f.simp.value=apvtim/12;
+				f.simp.value=apvtim/20;
 				f.mensa.value='APV OPCION B';
 
 
 			}
 			else if(total>161500 && liq>=5802360){
-				var tasaint=0.04*liq;
+				var tasaint=0.35*liq;
 				var dcto= 0.03*liq;
 				var tot=tasaint-dcto;
 				var apv= liq-tot;
-				var range=0.23*total;
+				var range=0.35*total;
 				var apvtim=apv-range;
 
-				f.simp.value=apvtim/12;
+				f.simp.value=apvtim/20;
 				f.mensa.value='APV OPCION B';
 
 
@@ -141,32 +144,7 @@
 
 			
 
-			if (si<270196){
-				f.simp.value ="Sueldo insuficiente";
-			}
-			else if (si>2185825){
-				si=2185825;
-				var sanual=0.1*((100-0.95)/100)*si*12;
-				vf= sanual*(Math.pow(porc,edad));
-			 r=1/porc;
-			 vp=vf*(((Math.pow(r,edad+1))-r)/(r-1));
-			 ax=(i*(Math.pow((1+i),mort-jub)))/((Math.pow((1+i),mort-jub))-1);
-			 an=vp*ax; 
-			 anual=(an+ma)/12;
-
-			f.simp.value=anual;
-
-
-
-
-			}
-			if (e<18 ){
-				f.simp.value='edad insuficiente';
-
-			}
-			else if(e>85){
-				f.simp.value='excede edad';
-			}
+			
 			
 			
 
